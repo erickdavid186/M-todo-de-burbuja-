@@ -1,25 +1,24 @@
-#Metodo de Ordenamiento de Inserción (InsertionSort)
-from random import sample 
-liasta = list(range(100))
-vectorins = sample(lista,8)
+#Método de  Ordenamiento la burbuja ascendente (BubbleSort)
+from random import sample
+lista = list(range(100))
+vectorbs = sample(list,8)
+def bubblesort (vectorbs):
+    """Esta función ordena el vector que le pases como argumento con el Método de Bubble Sort"""
 
-def insertionsort(vectorins):
-    """Esta función ordena el vector que le pases como argumento con 
-    el Metodo Insertion Sort"""
+print("El vector a orden ees:",vectorbs)
+n=0
 
-    print("El vector a ordenar con la insertación es:", vectorins)
+ for _ in vectorbs:
+  n+=1
 
-    largo = 0
+ for i in range(n-1):
+  
+     for j in range(0, n-i-1):
 
-    for i in vectorins:
-        largo += 1
-    for i in range(1, largo):
-        elemento = vectorins[i]
-        j = i-1
-        while j >= 0 and elemento < vectorins[j]
-                vectorins[j+1] = vectorins[j]
-                j -= 1
-        vectorins[j+1] = elemento 
-    print("El vector ordenado con inserción es: ", vectorins)
+         if vectorbs[j] > vectorbs[j+1] :
+             vectorbs[j],vectorbs[j+1]= vectorbs[j+1], vectorbs[j]
 
-insertionsort(vectorins)
+    print ("El vector ordenado es:",vectorbs)
+
+bubblesort(vectorbs)
+
